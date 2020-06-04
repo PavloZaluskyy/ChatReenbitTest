@@ -63,5 +63,8 @@
       "pipe": true,
       "service": true
     }
+  },
+  "cli": {
+    "analytics": "b7ae7cb0-df2a-4c12-9fca-8cea71bc37fd"
   }
 }
