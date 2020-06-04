@@ -1,0 +1,45 @@
+.searchPane{
+    height: auto;
+    background: #f5f5f5;
+    border-bottom: 1px solid #dedede;
+}
+.container{
+    padding: 15px;
+}
+.aboutUser{
+    padding-bottom: 16px;
+}
+.aboutUser .userAvatar{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #ebecf0;
+}
+.aboutUser .status{
+    font-size: 20px;
+    position: relative;
+    color: green;
+    font-weight: 600;
+    margin-left: -18px;
+    top: -2px;
+}
+.search{
+    border: 1px solid #e2e2e2;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    
+}
+.search input{
+   width: 85%;
+   border: none;
+   height: 30px;
+   color: #989898;
+   font-family: sans-serif;
+   padding: 10px 0px;
+   
+}
+.search i{
+    padding: 10px 7px;
+    color: #989898;
+}

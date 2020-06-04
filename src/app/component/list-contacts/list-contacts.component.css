@@ -1,0 +1,59 @@
+section{
+    height: 100%;
+    border-left: 1px solid #dedede;
+}
+h2{
+    margin: 27px 10px;
+    font-family: sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    color: #5ca4be;
+}
+.listContacts{
+    width: 100%;
+}
+.listContacts .person{
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 18px 10px;
+    border-bottom: 1px solid #dedede;
+}
+
+.listContacts .person .avatar img{
+    width: 48px;
+    height: 48px;
+}
+ .avatar .status{
+    font-size: 20px;
+    position: relative;
+    font-weight: 600;
+    color: green;
+    margin-left: -18px;
+    top: -2px;
+}
+.listContacts .person .info{
+    width: auto;
+    margin: 0 12px;
+}
+.listContacts .person .info, h3{
+    color: #8d8d8d;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 300;
+}
+.listContacts .person .info, .message{
+    color: #acacac;
+}
+.listContacts .person .date{
+     flex: auto;
+     align-self: flex-start;
+     text-align: right;
+}
+.listContacts .person .date span{
+    color: #676767;
+    position: relative;
+    font-size: 12px;
+    top: 7px;
+}
