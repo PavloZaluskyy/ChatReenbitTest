@@ -10,6 +10,7 @@ import { MainChatComponent } from './component/main-chat/main-chat.component';
 import { SearchPanelComponent } from './component/list-contacts/search-panel/search-panel.component';
 import { MainTopComponent } from './component/main-chat/main-top/main-top.component';
 import { MainBottomComponent } from './component/main-chat/main-bottom/main-bottom.component';
+import { TruncateTextPipe } from './truncate-text.pipe';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { MainBottomComponent } from './component/main-chat/main-bottom/main-bott
     MainChatComponent,
     SearchPanelComponent,
     MainTopComponent,
-    MainBottomComponent
+    MainBottomComponent,
+    TruncateTextPipe
   ],
   imports: [
     BrowserModule,

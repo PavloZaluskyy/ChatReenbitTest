@@ -16,6 +16,7 @@ h2{
 }
 .listContacts .person{
     height: auto;
+    cursor: pointer;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -35,10 +36,11 @@ h2{
     font-size: 20px;
     position: relative;
     font-weight: 600;
-    color: green;
     margin-left: -18px;
     top: -2px;
 }
+.online{color: green;}
+.offline{color: red;}
 .listContacts .person .info{
     width: auto;
     margin: 0 12px;
@@ -64,4 +66,8 @@ h2{
     position: relative;
     font-size: 12px;
     top: 7px;
+}
+.active, .active .info h3, .active .info .message, .active .date span{
+    background: #3C4252;
+    color: #fff!important;
 }

@@ -10,21 +10,30 @@ import { DataService } from 'src/service/data.service';
 })
 export class ListContactsComponent implements OnInit {
 
-  public contacts:any[];
-  fun(item){
-    console.log(1)
-    console.log(item[0].name);
-  }
+  public contacts: any[];
 
   constructor(private DataService: DataService) {
-    
-  }
 
+  }
+  selectContact(item, event) {
+    let allActiveClassCss = document.querySelectorAll(".active");
+    event.currentTarget.classList.add('active');
+    if (allActiveClassCss[0] != undefined)
+      allActiveClassCss[0].classList.remove('active');
+
+  }
+  sortForDate(items) {
+    items.sort((a, b) => {
+      let dateA: any = new Date(a.messagesHistory[a.messagesHistory.length - 1].date),
+        dateB: any = new Date(b.messagesHistory[b.messagesHistory.length - 1].date);
+      return dateB - dateA
+    })
+  }
   ngOnInit() {
     this.DataService.getDate()
       .subscribe(data => {
-        console.log(data)
-        this.contacts=(data);
+        this.sortForDate(data);
+        this.contacts = (data);
         return this.contacts;
       });
   }

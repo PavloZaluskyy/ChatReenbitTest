@@ -3,5 +3,5 @@ export interface Data {
     name: string,
     status: string,
     avatar: string,
-    massagesHistory: any[]
+    messagesHistory: any[]
 }

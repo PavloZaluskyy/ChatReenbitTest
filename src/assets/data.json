@@ -1,97 +1,151 @@
 [
 	{
-		"name": "Alex",
+		"id": 1,
+		"name": "Alice Freeman",
 		"status": "online",
-		"avatar": "url-1",
-		"massagesHistory": [{
-			"text": "Hello",
-			"whoSent": "his",
-			"date": "04/07/17",
-			"time": "4:00"
+		"avatar": "img/avatar3.png",
+		"messagesHistory": [{
+			"message": "Quickly come to the meeting room 1B, we have a big server issue",
+			"sender": "his",
+			"date": "4/22/17",
+			"time": "2:00AM"
 			},
 			{
-			"text": "Hi",
-			"whoSent": "my",
-			"date": "04/07/17",
-			"time": "4:10"
+          	"message": "I`m having breakfast right now, can`t you wait for 10 minutes?",
+			"sender": "me",
+          	"date": "4/22/17",
+          	"time": "5:05AM"
 			},
 			{
-			"text": "Where are you?",
-			"whoSent": "his",
-			"date": "04/07/17",
-			"time": "4:15"
+          	"message": "You are the worst!",
+			"sender": "his",
+			"date": "6/12/17",
+          	"time": "6:10AM"
 			}
 		]		
 	},
 	{
-		"name": "Bogdan",
-		"status": "offline",
-		"avatar": "url-2",
-		"massagesHistory": [{
-			"text": "Hi",
-			"whoSent": "his",
-			"date": "05/08/17",
-			"time": "4:00"
+		"id": 2,
+		"name": "Josefina",
+		"status": "online",
+		"avatar": "img/avatar2.png",
+		"messagesHistory": [{
+          	"message": "Quickly come to the meeting room 1B, we have a big server issue",
+			"sender": "his",
+			"date": "4/22/17",
+			"time": "4:00AM"		
 			},
 			{
-			"text": "Hi",
-			"whoSent": "my",
-			"date": "05/08/17",
-			"time": "4:10"
+          	"message": "I`m having breakfast right now, can`t you wait for 10 minutes?",
+			"sender": "me",
+			"date": "4/22/17",
+          	"time": "4:05AM"
 			},
 			{
-			"text": "You late",
-			"whoSent": "his",
-			"date": "05/08/17",
-			"time": "4:15"
+			"message": "We are losing money! Quick!",	
+			"sender": "his",
+			"date": "4/22/17",
+          	"time": "4:10AM"
 			}
 		]						
 	},
 	{
-		"name": "Oleg",
-		"status": "online",
-		"avatar": "url-3",
-		"massagesHistory": [{
-			"text": "FUCKK",
-			"whoSent": "my",
+		"id": 3,
+		"name": "Velazquez",
+		"status": "offline",
+		"avatar": "img/avatar1.png",
+		"messagesHistory": [{
+			"message": "Quickly!",
+			"sender": "his",
 			"date": "10/10/18",
 			"time": "16:00"
 			},
 			{
-			"text": "It`s Ok?",
-			"whoSent": "his",
+			"message": "I`m having breakfast right now, can`t you wait for 10 minutes?",
+			"sender": "me",
 			"date": "10/10/18",
 			"time": "16:10"
 			},
 			{
-			"text": "Yea, I`m funny",
-			"whoSent": "my",
+          	"message": "Quickly come to the meeting room 1B, we have a big server issue",
+			"sender": "his",
 			"date": "10/10/18",
 			"time": "16:15"
 			}
 		]				
 	},
 	{
-		"name": "Stepan",
+		"id": 4,
+		"name": "Barrera",
 		"status": "online",
-		"avatar": "url-4",
-		"massagesHistory": [{
-			"text": "1",
-			"whoSent": "my",
-			"date": "10/10/18",
+		"avatar": "img/avatar7.png",
+		"messagesHistory": [{
+          	"message": "Quickly!",
+			"sender": "his",
+			"date": "10/15/18",
 			"time": "16:00"
 			},
 			{
-			"text": "2",
-			"whoSent": "his",
-			"date": "10/10/18",
+          	"message": "I`m having breakfast right now, can`t you wait for 10 minutes?",
+			"sender": "me",
+			"date": "10/15/18",
 			"time": "16:10"
 			},
 			{
-			"text": "3",
-			"whoSent": "my",
-			"date": "10/10/18",
+          	"message": "Quickly come to the meeting room 1B, we have a big server issue",
+			"sender": "his",
+			"date": "10/15/18",
 			"time": "16:15"
+			}
+		]				
+	},
+	{
+		"id": 5,
+		"name": "Man is with mustache",
+		"status": "online",
+		"avatar": "img/avatar4.png",
+		"messagesHistory": [{
+          	"message": "Hi, your mustache is beautiful",
+			"sender": "me",
+			"date": "05/06/20",
+			"time": "16:00"
+			},
+			{
+          	"message": "Thanks =>",
+			"sender": "his",
+			"date": "05/06/20",
+			"time": "16:00"
+			}
+		]				
+	},
+	{
+		"id": 6,
+		"name": "Grey Man",
+		"status": "offline",
+		"avatar": "img/avatar6.png",
+		"messagesHistory": [{
+          	"message": "Hi!",
+			"sender": "his",
+			"date": "06/06/20",
+			"time": "13:28"
+			},
+			{
+          	"message": "Hello! How are you?",
+			"sender": "me",
+			"date": "06/06/20",
+			"time": "14:50"
+			},
+			{
+          	"message": "I`m great, thank, and are you?",
+			"sender": "his",
+			"date": "06/06/20",
+			"time": "14:51"
+			},
+			{
+          	"message": "I`m ok",
+			"sender": "me",
+			"date": "06/06/20",
+			"time": "15:08"
 			}
 		]				
 	}
