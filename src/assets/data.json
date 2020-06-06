@@ -1,0 +1,98 @@
+[
+	{
+		"name": "Alex",
+		"status": "online",
+		"avatar": "url-1",
+		"massagesHistory": [{
+			"text": "Hello",
+			"whoSent": "his",
+			"date": "04/07/17",
+			"time": "4:00"
+			},
+			{
+			"text": "Hi",
+			"whoSent": "my",
+			"date": "04/07/17",
+			"time": "4:10"
+			},
+			{
+			"text": "Where are you?",
+			"whoSent": "his",
+			"date": "04/07/17",
+			"time": "4:15"
+			}
+		]		
+	},
+	{
+		"name": "Bogdan",
+		"status": "offline",
+		"avatar": "url-2",
+		"massagesHistory": [{
+			"text": "Hi",
+			"whoSent": "his",
+			"date": "05/08/17",
+			"time": "4:00"
+			},
+			{
+			"text": "Hi",
+			"whoSent": "my",
+			"date": "05/08/17",
+			"time": "4:10"
+			},
+			{
+			"text": "You late",
+			"whoSent": "his",
+			"date": "05/08/17",
+			"time": "4:15"
+			}
+		]						
+	},
+	{
+		"name": "Oleg",
+		"status": "online",
+		"avatar": "url-3",
+		"massagesHistory": [{
+			"text": "FUCKK",
+			"whoSent": "my",
+			"date": "10/10/18",
+			"time": "16:00"
+			},
+			{
+			"text": "It`s Ok?",
+			"whoSent": "his",
+			"date": "10/10/18",
+			"time": "16:10"
+			},
+			{
+			"text": "Yea, I`m funny",
+			"whoSent": "my",
+			"date": "10/10/18",
+			"time": "16:15"
+			}
+		]				
+	},
+	{
+		"name": "Stepan",
+		"status": "online",
+		"avatar": "url-4",
+		"massagesHistory": [{
+			"text": "1",
+			"whoSent": "my",
+			"date": "10/10/18",
+			"time": "16:00"
+			},
+			{
+			"text": "2",
+			"whoSent": "his",
+			"date": "10/10/18",
+			"time": "16:10"
+			},
+			{
+			"text": "3",
+			"whoSent": "my",
+			"date": "10/10/18",
+			"time": "16:15"
+			}
+		]				
+	}
+]
