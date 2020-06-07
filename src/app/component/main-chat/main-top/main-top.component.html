@@ -1,7 +1,8 @@
 <div class="mainTop">
   <div class="avatar">
-    <img src="assets/img/avatar1.png" alt="avatar">
-    <i class="far fa-check-circle status"></i>
+    <img src="assets/{{selectContact.avatar}}" alt="avatar">
+    <i *ngIf="selectContact.status == 'online'" class="far fa-check-circle status online"></i>
+    <i *ngIf="selectContact.status == 'offline'" class="fas fa-times-circle status offline"></i>
   </div>
-  <h2>Alice Freeman</h2>
+  <h2>{{selectContact.name}}</h2>
 </div>

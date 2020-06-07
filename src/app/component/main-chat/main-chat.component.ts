@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-main-chat',
@@ -6,8 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main-chat.component.css']
 })
 export class MainChatComponent implements OnInit {
-
-  constructor() { }
+  @Input() selectContact:any;
+  @Input() contacts:any[];
+  
+  default(){
+    console.log(this.selectContact)
+  }
+  
+  constructor() { setTimeout(()=>this.default(), 1000) }
 
   ngOnInit() {
   }

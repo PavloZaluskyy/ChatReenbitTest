@@ -15,7 +15,6 @@
     font-size: 20px;
     position: relative;
     font-weight: 600;
-    color: green;
     margin-left: -18px;
     top: -2px;
 }
@@ -25,3 +24,5 @@ h2{
     font-weight: 400;
     color: #565656;
 }
+.online{color: green;}
+.offline{color: red;}

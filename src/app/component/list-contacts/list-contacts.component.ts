@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { DataService } from 'src/service/data.service';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+//import { DataService } from 'src/service/data.service';
 //import { Data } from 'src/app/data';
 
 
@@ -10,32 +10,18 @@ import { DataService } from 'src/service/data.service';
 })
 export class ListContactsComponent implements OnInit {
 
-  public contacts: any[];
+  @Input() contacts: any[];
+  @Output() selectCont = new EventEmitter<any>();
 
-  constructor(private DataService: DataService) {
-
-  }
-  selectContact(item, event) {
+  constructor() {}
+  selectContact(increased:any, event) {
     let allActiveClassCss = document.querySelectorAll(".active");
     event.currentTarget.classList.add('active');
     if (allActiveClassCss[0] != undefined)
       allActiveClassCss[0].classList.remove('active');
-
+    this.selectCont.emit(increased);
   }
-  sortForDate(items) {
-    items.sort((a, b) => {
-      let dateA: any = new Date(a.messagesHistory[a.messagesHistory.length - 1].date),
-        dateB: any = new Date(b.messagesHistory[b.messagesHistory.length - 1].date);
-      return dateB - dateA
-    })
-  }
-  ngOnInit() {
-    this.DataService.getDate()
-      .subscribe(data => {
-        this.sortForDate(data);
-        this.contacts = (data);
-        return this.contacts;
-      });
-  }
+  
+  ngOnInit() {}
 
 }
