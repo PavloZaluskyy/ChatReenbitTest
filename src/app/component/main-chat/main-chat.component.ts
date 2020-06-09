@@ -15,7 +15,6 @@ export class MainChatComponent implements OnInit {
 
   getNewMessage(increased: string, senderArg) {
     this.generateAnswerMessage();
-
     let date = new Date();
     let sender: string = senderArg;
     let newMessages = {
@@ -39,10 +38,6 @@ export class MainChatComponent implements OnInit {
           .then(data => this.answer = data)
       })
   }
-  a(text) {
-    console.log(text.value);
-  }
-
 
   constructor(private APIAnswerService: APIAnswerService) { }
 

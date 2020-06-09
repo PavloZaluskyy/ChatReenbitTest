@@ -14,6 +14,10 @@ h2{
     overflow: auto;
     max-height: 356px;
 }
+.listContacts::-webkit-scrollbar{width: 5px; height: 5px;}
+.listContacts::-webkit-scrollbar-button {  background-color: #e0e0e0; }
+.listContacts::-webkit-scrollbar-track {  background-color: #e0e0e0;}
+.listContacts::-webkit-scrollbar-thumb { height: 50px; background-color: #3c4252; border-radius: 3px;}
 .listContacts .person{
     height: auto;
     cursor: pointer;

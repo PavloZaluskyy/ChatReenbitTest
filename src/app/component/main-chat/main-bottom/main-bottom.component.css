@@ -11,7 +11,7 @@
     padding: 10px 15px;
     font-size: 16px;
     padding-top: 25px;
-    border-radius: 300px;
+    border-radius: 30px;
     border: 2px solid #e1e1e1;
 }
 .mainBottom .far{
@@ -19,6 +19,7 @@
     color: #797979;
     position: relative;
     top: 25px;
+    z-index: 40000;
     left: -50px;
 }
 .mainBottom .far::before{cursor: pointer;}
