@@ -21,3 +21,4 @@
     top: 25px;
     left: -50px;
 }
+.mainBottom .far::before{cursor: pointer;}

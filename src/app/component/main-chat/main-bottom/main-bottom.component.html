@@ -1,4 +1,4 @@
 <div class="mainBottom">
-  <textarea placeholder="Type your message"></textarea>
-  <i class="far fa-paper-plane"></i>
+  <textarea placeholder="Type your message" #textarea (keyup.enter)="SendEnter(textarea.value, $event)"></textarea>
+  <i (click)="Send(textarea.value, textarea)" class="far fa-paper-plane"></i>
 </div>

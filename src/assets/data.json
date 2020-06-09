@@ -7,20 +7,17 @@
 		"messagesHistory": [{
 			"message": "Quickly come to the meeting room 1B, we have a big server issue",
 			"sender": "his",
-			"date": "4/22/17",
-			"time": "2:00AM"
+			"date": "Tue Apr 22 2017 02:00:00 GMT+0300 (за східноєвропейським літнім часом)"
 			},
 			{
           	"message": "I`m having breakfast right now, can`t you wait for 10 minutes?",
 			"sender": "me",
-          	"date": "4/22/17",
-          	"time": "5:05AM"
+			"date": "Tue Apr 22 2017 05:05:00 GMT+0300 (за східноєвропейським літнім часом)"
 			},
 			{
           	"message": "You are the worst!",
 			"sender": "his",
-			"date": "6/12/17",
-          	"time": "6:10AM"
+			"date": "Tue Jun 12 2017 06:10:00 GMT+0300 (за східноєвропейським літнім часом)"
 			}
 		]		
 	},
@@ -32,20 +29,17 @@
 		"messagesHistory": [{
           	"message": "Quickly come to the meeting room 1B, we have a big server issue",
 			"sender": "his",
-			"date": "4/22/17",
-			"time": "4:00AM"		
+			"date": "Tue Apr 22 2017 03:58:00 GMT+0300 (за східноєвропейським літнім часом)"		
 			},
 			{
           	"message": "I`m having breakfast right now, can`t you wait for 10 minutes?",
 			"sender": "me",
-			"date": "4/22/17",
-          	"time": "4:05AM"
+			"date": "Tue Apr 22 2017 04:05:00 GMT+0300 (за східноєвропейським літнім часом)"
 			},
 			{
 			"message": "We are losing money! Quick!",	
 			"sender": "his",
-			"date": "4/22/17",
-          	"time": "4:10AM"
+			"date": "Tue Apr 22 2017 04:00:00 GMT+0300 (за східноєвропейським літнім часом)"
 			}
 		]						
 	},
@@ -57,20 +51,17 @@
 		"messagesHistory": [{
 			"message": "Quickly!",
 			"sender": "his",
-			"date": "10/10/18",
-			"time": "16:00"
+			"date": "Tue Oct 10 2018 16:10:48 GMT+0300 (за східноєвропейським літнім часом)"
 			},
 			{
 			"message": "I`m having breakfast right now, can`t you wait for 10 minutes?",
 			"sender": "me",
-			"date": "10/10/18",
-			"time": "16:10"
+			"date": "Tue Oct 10 2018 16:10:48 GMT+0300 (за східноєвропейським літнім часом)"
 			},
 			{
           	"message": "Quickly come to the meeting room 1B, we have a big server issue",
 			"sender": "his",
-			"date": "10/10/18",
-			"time": "16:15"
+			"date": "Tue Oct 10 2018 16:15:48 GMT+0300 (за східноєвропейським літнім часом)"
 			}
 		]				
 	},
@@ -82,20 +73,17 @@
 		"messagesHistory": [{
           	"message": "Quickly!",
 			"sender": "his",
-			"date": "10/15/18",
-			"time": "16:00"
+			"date": "Tue Oct 15 2018 16:00:48 GMT+0300 (за східноєвропейським літнім часом)"
 			},
 			{
           	"message": "I`m having breakfast right now, can`t you wait for 10 minutes?",
 			"sender": "me",
-			"date": "10/15/18",
-			"time": "16:10"
+			"date": "Tue Oct 15 2018 16:10:48 GMT+0300 (за східноєвропейським літнім часом)"
 			},
 			{
           	"message": "Quickly come to the meeting room 1B, we have a big server issue",
 			"sender": "his",
-			"date": "10/15/18",
-			"time": "16:15"
+			"date": "Tue Oct 15 2018 16:15:48 GMT+0300 (за східноєвропейським літнім часом)"
 			}
 		]				
 	},
@@ -107,14 +95,12 @@
 		"messagesHistory": [{
           	"message": "Hi, your mustache is beautiful",
 			"sender": "me",
-			"date": "05/06/20",
-			"time": "16:00"
+			"date": "Tue May 05 2020 16:00:48 GMT+0300 (за східноєвропейським літнім часом)"
 			},
 			{
           	"message": "Thanks =>",
 			"sender": "his",
-			"date": "05/06/20",
-			"time": "16:00"
+			"date": "Tue May 05 2020 16:00:48 GMT+0300 (за східноєвропейським літнім часом)"
 			}
 		]				
 	},
@@ -126,26 +112,22 @@
 		"messagesHistory": [{
           	"message": "Hi!",
 			"sender": "his",
-			"date": "06/06/20",
-			"time": "13:28"
+			"date": "Tue Jun 06 2020 13:28:07 GMT+0300 (за східноєвропейським літнім часом)"
 			},
 			{
           	"message": "Hello! How are you?",
 			"sender": "me",
-			"date": "06/06/20",
-			"time": "14:50"
+			"date": "Tue Jun 06 2020 14:50:10 GMT+0300 (за східноєвропейським літнім часом)"
 			},
 			{
           	"message": "I`m great, thank, and are you?",
 			"sender": "his",
-			"date": "06/06/20",
-			"time": "14:51"
+			"date": "Tue Jun 06 2020 14:51:09 GMT+0300 (за східноєвропейським літнім часом)"
 			},
 			{
           	"message": "I`m ok",
 			"sender": "me",
-			"date": "06/06/20",
-			"time": "15:08"
+			"date": "Tue Jun 06 2020 15:08:37 GMT+0300 (за східноєвропейським літнім часом)"
 			}
 		]				
 	}

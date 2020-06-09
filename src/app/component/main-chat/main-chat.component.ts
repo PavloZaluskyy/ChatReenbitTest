@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { APIAnswerService } from 'src/service/apianswer.service';
 
 @Component({
   selector: 'app-main-chat',
@@ -6,16 +7,49 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./main-chat.component.css']
 })
 export class MainChatComponent implements OnInit {
-  @Input() selectContact:any;
-  @Input() contacts:any[];
-  
-  default(){
-    console.log(this.selectContact)
+  @Input() selectContact: any;
+  @Input() contacts: any[];
+  @Output() newMessage = new EventEmitter<object>();
+  private _url = 'https://api.chucknorris.io/jokes/random';
+  public answer: any;
+
+  getNewMessage(increased: string, senderArg) {
+    this.generateAnswerMessage();
+
+    let date = new Date();
+    let sender: string = senderArg;
+    let newMessages = {
+      message: increased,
+      sender: sender,
+      date: date,
+    }
+    this.newMessage.emit(newMessages);
+    if (senderArg == 'his') {
+      return true;
+    }
+    else {
+      this.getNewMessage(this.answer.value, "his");
+    }
   }
-  
-  constructor() { setTimeout(()=>this.default(), 1000) }
+
+  generateAnswerMessage() {
+    fetch(this._url)
+      .then(data => {
+        data.json()
+          .then(data => this.answer = data)
+      })
+  }
+  a(text) {
+    console.log(text.value);
+  }
+
+
+  constructor(private APIAnswerService: APIAnswerService) { }
 
   ngOnInit() {
+    this.APIAnswerService.getAnswer()
+      .subscribe(data => {
+        return this.answer = data;
+      });
   }
-
 }

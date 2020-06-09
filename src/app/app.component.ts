@@ -9,13 +9,21 @@ import { DataService } from 'src/service/data.service';
 export class AppComponent implements OnInit {
 
   public contacts: any[];
-  
-  sentSelectContactToMainChatComponent:any;
-  
-  constructor(private DataService: DataService) {}
-  selectContact(increased:any){
+
+  sentSelectContactToMainChatComponent: any;
+
+  constructor(private DataService: DataService) { }
+  selectContact(increased: any) {
     this.sentSelectContactToMainChatComponent = increased
-    console.log(this.sentSelectContactToMainChatComponent);
+  }
+  getNewMessage(event) {
+    const currentId = this.sentSelectContactToMainChatComponent.id;
+    for (const key of this.contacts) {
+      if (key.id == currentId) {
+        key.messagesHistory.push(event);
+        this.sortForDate(this.contacts)
+      }
+    }
   }
   sortForDate(items) {
     items.sort((a, b) => {
@@ -29,7 +37,7 @@ export class AppComponent implements OnInit {
       .subscribe(data => {
         this.sortForDate(data);
         console.log(data);
-        this.contacts = (data);
+        this.contacts = data;
         this.sentSelectContactToMainChatComponent = this.contacts[0];
         return this.contacts;
       });
