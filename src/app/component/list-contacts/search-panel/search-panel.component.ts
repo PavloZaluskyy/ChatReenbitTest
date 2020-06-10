@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 
 @Component({
@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./search-panel.component.css']
 })
 export class SearchPanelComponent implements OnInit {
+  
+  @Output() setSearch = new EventEmitter<string>();
+  search:string;
+  setSearchMethod(search){
+    this.setSearch.emit(search);
+  }
   constructor() { }
 
   ngOnInit() {

@@ -6,7 +6,8 @@
     </div>
     <div class="search">
       <i class="fas fa-search"></i>
-      <input type="search" placeholder="Search or start new chat">
+      <input type="search" [(ngModel)]="search" (ngModelChange)="setSearchMethod(search)" name="search" placeholder="Search or start new chat">
+
     </div>
   </div>
 </section>
