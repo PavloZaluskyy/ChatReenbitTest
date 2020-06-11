@@ -1,3 +1,6 @@
+//SendEnter() this method sends the data entered from the textarea to the main chat component. Makes when you press Enter
+// Send() this method sends the data entered from the textarea to the main chat component. Makes when you click on the icon
+// validation() this method corresponds to the validation of textarea
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({

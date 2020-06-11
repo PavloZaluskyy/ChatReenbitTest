@@ -1,3 +1,7 @@
+// setSearchMethod() is a method that searches the contact list
+// selectContact()   this is a method that selects a contact and sends it to the app.component
+//                   and then to the main.chat.component
+// 
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
@@ -5,36 +9,40 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   templateUrl: './list-contacts.component.html',
   styleUrls: ['./list-contacts.component.css']
 })
+
 export class ListContactsComponent implements OnInit {
 
   @Input() contacts: any[];
   @Output() selectCont = new EventEmitter<any>();
-  viewContacts:any = false;
 
-  constructor() {}
-  setSearchMethod(event){
+  viewContacts: any = false;
+  dontFoundContacts: boolean = false;
+  searchEnter: string = "";
+
+  constructor() { }
+
+  setSearchMethod(event) {
+    this.dontFoundContacts = true;
     this.viewContacts = []
-    //this.viewContacts = this.contacts;
+    if (event == "") this.dontFoundContacts = false;
     for (const key of this.contacts) {
-     // console.log(key.name)
-      if (key.name.search(event) != -1 ) {
+      if (key.name.search(event) != -1) {
+        this.dontFoundContacts = false;
         this.viewContacts.push(key);
-        console.log(this.viewContacts);
       }
-      else{
-       // this.viewContacts = this.contacts;
-        console.log("None")
+      else {
+        this.searchEnter = event;
       }
     }
   }
-  selectContact(increased:any, event) {
+  selectContact(increased: any, event) {
     let allActiveClassCss = document.querySelectorAll(".active");
     event.currentTarget.classList.add('active');
     if (allActiveClassCss[0] != undefined)
       allActiveClassCss[0].classList.remove('active');
     this.selectCont.emit(increased);
   }
-  
-  ngOnInit() {}
+
+  ngOnInit() { }
 
 }

@@ -1,26 +1,30 @@
 <section class="mainContant">
   <app-main-top [selectContact]="selectContact"></app-main-top>
-  <div class="contant">
+  <div #contant class="contant">
     <div *ngFor="let item of selectContact.messagesHistory">
-      <div class="message his" *ngIf="item.sender == 'his'">
-        <div class="flexContainer">
-          <img src="assets/{{selectContact.avatar}}" class="avatar" alt="avatar">
-          <p class="text">{{item.message}}</p>
-        </div>
-        <span class="dateTime">
-          <span class="date">{{item.date | date:'short'}}</span>
-        </span>
+      <div *ngIf="item.message == '' ">
+        <p class="withoutTalking">Write him something</p>
       </div>
-
-      <div class="message my" *ngIf="item.sender == 'me'">
-        <div class="flexContainer">
-          <p class="text">{{item.message}}</p>
+      <div *ngIf="item.message != '' ">
+        <div class="message his" *ngIf="item.sender == 'his'">
+          <div class="flexContainer">
+            <img src="assets/{{selectContact.avatar}}" class="avatar" alt="avatar">
+            <p class="text">{{item.message}}</p>
+          </div>
+          <span class="dateTime">
+            <span class="date">{{item.date | date:'short'}}</span>
+          </span>
         </div>
-        <span class="dateTime">
-          <span class="date">{{item.date | date:'short'}}</span>
-        </span>
+        <div class="message my" *ngIf="item.sender == 'me'">
+          <div class="flexContainer">
+            <p class="text">{{item.message}}</p>
+          </div>
+          <span class="dateTime">
+            <span class="date">{{item.date | date:'short'}}</span>
+          </span>
+        </div>
       </div>
     </div>
   </div>
-  <app-main-bottom (values)="getNewMessage($event, 'me')"></app-main-bottom>
+  <app-main-bottom (values)="getNewMessage($event, 'me', contant)"></app-main-bottom>
 </section>

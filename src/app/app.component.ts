@@ -1,3 +1,7 @@
+// ngOnInit() this method reads data from DataService
+// getNewMessage() this method adds new messages to JSON
+// selectContact() this method sends the selected contact from the list.contacts.component to the main-chatcomponent
+// sortForDate() this method makes sorting contacts by date
 import { Component, OnInit } from '@angular/core';
 import { DataService } from 'src/service/data.service';
 
@@ -6,6 +10,7 @@ import { DataService } from 'src/service/data.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent implements OnInit {
 
   public contacts: any[];

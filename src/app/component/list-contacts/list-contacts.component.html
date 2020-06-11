@@ -3,37 +3,46 @@
   <div class="contacts">
     <h2>Chats</h2>
     <div class="listContacts">
-      <div *ngIf="!viewContacts">
-        <div class="person" (click)="selectContact(item, $event)"
-         *ngFor="let item of contacts">
-          <div class="avatar">
-            <img src="assets/{{item.avatar}}" alt="avatar">
-            <i *ngIf="item.status == 'online'" class="far fa-check-circle status online"></i>
-            <i *ngIf="item.status == 'offline'" class="fas fa-times-circle status offline"></i>
+      <div *ngIf="!dontFoundContacts">
+        <div *ngIf="!viewContacts">
+          <div class="person" (click)="selectContact(item, $event)" *ngFor="let item of contacts">
+            <div class="avatar">
+              <img src="assets/{{item.avatar}}" alt="avatar">
+              <i *ngIf="item.status == 'online'" class="far fa-check-circle status online"></i>
+              <i *ngIf="item.status == 'offline'" class="fas fa-times-circle status offline"></i>
+            </div>
+            <div class="info">
+              <h3>{{item.name}}</h3>
+              <span
+                class="message">{{item.messagesHistory[item.messagesHistory.length-1].message | truncateText:28}}</span>
+            </div>
+            <div class="date">
+              <span>{{item.messagesHistory[item.messagesHistory.length-1].date | date:'mediumDate'}}</span>
+            </div>
           </div>
-          <div class="info">
-            <h3>{{item.name}}</h3>
-            <span class="message">{{item.messagesHistory[item.messagesHistory.length-1].message | truncateText:28}}</span>
-          </div>
-          <div class="date"><span>{{item.messagesHistory[item.messagesHistory.length-1].date | date:'mediumDate'}}</span>
+        </div>
+        <div *ngIf="viewContacts">
+          <div class="person" (click)="selectContact(item, $event)" *ngFor="let item of viewContacts">
+            <div class="avatar">
+              <img src="assets/{{item.avatar}}" alt="avatar">
+              <i *ngIf="item.status == 'online'" class="far fa-check-circle status online"></i>
+              <i *ngIf="item.status == 'offline'" class="fas fa-times-circle status offline"></i>
+            </div>
+            <div class="info">
+              <h3>{{item.name}}</h3>
+              <span class="message"
+                *ngIf="item.messagesHistory[0]!= '' ">{{item.messagesHistory[item.messagesHistory.length-1].message | truncateText:28}}</span>
+            </div>
+            <div class="date">
+              <span
+                *ngIf="item.messagesHistory[0]!= '' ">{{item.messagesHistory[item.messagesHistory.length-1].date | date:'mediumDate'}}</span>
+            </div>
           </div>
         </div>
       </div>
-      <div  *ngIf="viewContacts">
-        <div class="person" (click)="selectContact(item, $event)"
-        *ngFor="let item of viewContacts">
-          <div class="avatar">
-            <img src="assets/{{item.avatar}}" alt="avatar">
-            <i *ngIf="item.status == 'online'" class="far fa-check-circle status online"></i>
-            <i *ngIf="item.status == 'offline'" class="fas fa-times-circle status offline"></i>
-          </div>
-          <div class="info">
-            <h3>{{item.name}}</h3>
-            <span class="message">{{item.messagesHistory[item.messagesHistory.length-1].message | truncateText:28}}</span>
-          </div>
-          <div class="date"><span>{{item.messagesHistory[item.messagesHistory.length-1].date | date:'mediumDate'}}</span>
-          </div>
-        </div>
+      <div *ngIf="dontFoundContacts">
+        <p class="dontFoundContacts">Sorry, no contact was found! </p>
+        <p class="dontFoundContacts"> Check spelling - {{searchEnter}}</p>
       </div>
 
     </div>
