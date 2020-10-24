@@ -5,7 +5,8 @@
     <div class="listContacts">
       <div *ngIf="!dontFoundContacts">
         <div *ngIf="!viewContacts">
-          <div class="person" (click)="selectContact(item, $event)" *ngFor="let item of contacts">
+          <div class="person" (click)="selectContact(item, $event)" *ngFor="let item of contacts; let first = first"
+          [ngClass]="{'active': first}"  >
             <div class="avatar">
               <img src="assets/{{item.avatar}}" alt="avatar">
               <i *ngIf="item.status == 'online'" class="far fa-check-circle status online"></i>

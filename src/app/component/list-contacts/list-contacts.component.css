@@ -12,7 +12,6 @@ h2{
 .listContacts{
     width: 100%;
     overflow: auto;
-    max-height: 356px;
 }
 .listContacts::-webkit-scrollbar{width: 5px; height: 5px;}
 .listContacts::-webkit-scrollbar-button {  background-color: #e0e0e0; }
@@ -28,6 +27,8 @@ h2{
     padding: 18px 10px;
     border-bottom: 1px solid #dedede;
 }
+.listContacts .person:hover{background-color: #F2F6FA;}
+
 
 .listContacts .person .avatar img{
     width: 48px;
@@ -72,9 +73,10 @@ h2{
     top: 7px;
 }
 .active, .active .info h3, .active .info .message, .active .date span{
-    background: #3C4252;
+    background: #3C4252!important;
     color: #fff!important;
 }
+
 .dontFoundContacts{
     font-size: 23px;
     margin: 0 10px;
