@@ -10,6 +10,10 @@ body{
 }
 a{
     text-decoration: none;
+    transition: all .4s ease;
+}
+div:hover{
+    transition: all .4s ease;
 }
 ul{
     list-style: none;   

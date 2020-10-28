@@ -11,6 +11,12 @@ import { SearchPanelComponent } from './component/list-contacts/search-panel/sea
 import { MainTopComponent } from './component/main-chat/main-top/main-top.component';
 import { MainBottomComponent } from './component/main-chat/main-bottom/main-bottom.component';
 import { TruncateTextPipe } from './truncate-text.pipe';
+import { SignInComponent } from './sign-in/sign-in.component';
+import { Routes, RouterModule } from '@angular/router';
+
+const appRoutes: Routes =[
+  { path: 'sign-in', component: SignInComponent}
+];
 
 @NgModule({
   declarations: [
@@ -20,11 +26,13 @@ import { TruncateTextPipe } from './truncate-text.pipe';
     SearchPanelComponent,
     MainTopComponent,
     MainBottomComponent,
-    TruncateTextPipe
+    TruncateTextPipe,
+    SignInComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    RouterModule.forRoot(appRoutes),
     HttpClientModule
   ],
   providers: [],

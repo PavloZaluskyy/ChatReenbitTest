@@ -29,6 +29,8 @@ export class AppComponent implements OnInit {
           this.sortForDate(this.contacts);
          } 
     }
+    console.log(this.contacts);
+    this.setLocalStorage(this.contacts)
   }
   sortForDate(items) {
     items.sort((a, b) => {
@@ -37,11 +39,21 @@ export class AppComponent implements OnInit {
       return dateB - dateA
     })
   }
+  setLocalStorage(data){
+   // localStorage.removeItem('data')
+    localStorage.setItem('data', JSON.stringify(data))
+  }
+  getLocalStorage(){
+    return localStorage.getItem('data')
+  }
   ngOnInit() {
     this.DataService.getDate()
       .subscribe(data => {
         this.sortForDate(data);
-        this.contacts = data;
+        if(localStorage.getItem('data'))
+          this.contacts = JSON.parse(this.getLocalStorage());
+        else
+          this.contacts = data
         this.sentSelectContactToMainChatComponent = this.contacts[0];
         return this.contacts;
       });

@@ -1,5 +1,6 @@
 <div class="wrapper">
   <div class="container">
+    <router-outlet></router-outlet>
     <app-list-contacts [contacts]="contacts" (selectCont)="selectContact($event)" class="leftPanel"></app-list-contacts>
     <app-main-chat class="rightPanel" [contacts]="contacts" (newMessage)="getNewMessage($event)"
       [selectContact]="sentSelectContactToMainChatComponent">
