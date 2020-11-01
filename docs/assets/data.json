@@ -1,0 +1,146 @@
+[
+	{
+		"id": 1,
+		"name": "Alice Freeman",
+		"status": "online",
+		"avatar": "img/avatar3.png",
+		"messagesHistory": [{
+			"message": "Quickly come to the meeting room 1B, we have a big server issue",
+			"sender": "his",
+			"date": "Tue Apr 22 2017 02:00:00 GMT+0300 (за східноєвропейським літнім часом)"
+			},
+			{
+          	"message": "I`m having breakfast right now, can`t you wait for 10 minutes?",
+			"sender": "me",
+			"date": "Tue Apr 22 2017 05:05:00 GMT+0300 (за східноєвропейським літнім часом)"
+			},
+			{
+          	"message": "You are the worst!",
+			"sender": "his",
+			"date": "Tue Jun 12 2017 06:10:00 GMT+0300 (за східноєвропейським літнім часом)"
+			}
+		]		
+	},
+	{
+		"id": 2,
+		"name": "Josefina",
+		"status": "online",
+		"avatar": "img/avatar2.png",
+		"messagesHistory": [{
+          	"message": "Quickly come to the meeting room 1B, we have a big server issue",
+			"sender": "his",
+			"date": "Tue Apr 22 2017 03:58:00 GMT+0300 (за східноєвропейським літнім часом)"		
+			},
+			{
+          	"message": "I`m having breakfast right now, can`t you wait for 10 minutes?",
+			"sender": "me",
+			"date": "Tue Apr 22 2017 04:05:00 GMT+0300 (за східноєвропейським літнім часом)"
+			},
+			{
+			"message": "We are losing money! Quick!",	
+			"sender": "his",
+			"date": "Tue Apr 22 2017 04:00:00 GMT+0300 (за східноєвропейським літнім часом)"
+			}
+		]						
+	},
+	{
+		"id": 3,
+		"name": "Velazquez",
+		"status": "offline",
+		"avatar": "img/avatar1.png",
+		"messagesHistory": [{
+			"message": "Quickly!",
+			"sender": "his",
+			"date": "Tue Oct 10 2018 16:10:48 GMT+0300 (за східноєвропейським літнім часом)"
+			},
+			{
+			"message": "I`m having breakfast right now, can`t you wait for 10 minutes?",
+			"sender": "me",
+			"date": "Tue Oct 10 2018 16:10:48 GMT+0300 (за східноєвропейським літнім часом)"
+			},
+			{
+          	"message": "Quickly come to the meeting room 1B, we have a big server issue",
+			"sender": "his",
+			"date": "Tue Oct 10 2018 16:15:48 GMT+0300 (за східноєвропейським літнім часом)"
+			}
+		]				
+	},
+	{
+		"id": 4,
+		"name": "Barrera",
+		"status": "online",
+		"avatar": "img/avatar7.png",
+		"messagesHistory": [{
+          	"message": "Quickly!",
+			"sender": "his",
+			"date": "Tue Oct 15 2018 16:00:48 GMT+0300 (за східноєвропейським літнім часом)"
+			},
+			{
+          	"message": "I`m having breakfast right now, can`t you wait for 10 minutes?",
+			"sender": "me",
+			"date": "Tue Oct 15 2018 16:10:48 GMT+0300 (за східноєвропейським літнім часом)"
+			},
+			{
+          	"message": "Quickly come to the meeting room 1B, we have a big server issue",
+			"sender": "his",
+			"date": "Tue Oct 15 2018 16:15:48 GMT+0300 (за східноєвропейським літнім часом)"
+			}
+		]				
+	},
+	{
+		"id": 5,
+		"name": "Man is with mustache",
+		"status": "online",
+		"avatar": "img/avatar4.png",
+		"messagesHistory": [{
+          	"message": "Hi, your mustache is beautiful",
+			"sender": "me",
+			"date": "Tue May 05 2020 16:00:48 GMT+0300 (за східноєвропейським літнім часом)"
+			},
+			{
+          	"message": "Thanks =>",
+			"sender": "his",
+			"date": "Tue May 05 2020 16:00:48 GMT+0300 (за східноєвропейським літнім часом)"
+			}
+		]				
+	},
+	{
+		"id": 6,
+		"name": "Grey Man",
+		"status": "offline",
+		"avatar": "img/avatar6.png",
+		"messagesHistory": [{
+          	"message": "Hi!",
+			"sender": "his",
+			"date": "Tue Jun 06 2020 13:28:07 GMT+0300 (за східноєвропейським літнім часом)"
+			},
+			{
+          	"message": "Hello! How are you?",
+			"sender": "me",
+			"date": "Tue Jun 06 2020 14:50:10 GMT+0300 (за східноєвропейським літнім часом)"
+			},
+			{
+          	"message": "I`m great, thank, and are you?",
+			"sender": "his",
+			"date": "Tue Jun 06 2020 14:51:09 GMT+0300 (за східноєвропейським літнім часом)"
+			},
+			{
+          	"message": "I`m ok",
+			"sender": "me",
+			"date": "Tue Jun 06 2020 15:08:37 GMT+0300 (за східноєвропейським літнім часом)"
+			}
+		]				
+	},
+	{
+		"id": 7,
+		"name": "Girl is with glasses ",
+		"status": "online",
+		"avatar": "img/avatar8.png",
+		"messagesHistory": [{
+          	"message": "",
+			"sender": "",
+			"date": ""
+			}
+		]				
+	}
+]
