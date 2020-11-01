@@ -26,7 +26,7 @@ export class ListContactsComponent implements OnInit {
     this.viewContacts = []
     if (event == "") this.dontFoundContacts = false;
     for (const key of this.contacts) {
-      if (key.name.search(event) != -1) {
+      if (key.name.toLowerCase().search(event.toLowerCase().trim()) != -1) {
         this.dontFoundContacts = false;
         this.viewContacts.push(key);
       }

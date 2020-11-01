@@ -21,11 +21,8 @@ export class MainBottomComponent implements OnInit {
     }
   }
   validation(text) {
-    if (text.trim() == "") {
-      return false;
-    } else {
-      return true
-    }
+    if (text.trim() == "") return false;
+    return true
   }
   Send(text, event) {
     let valid = this.validation(text);

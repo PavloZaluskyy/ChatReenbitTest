@@ -32,13 +32,15 @@ export class MainChatComponent implements OnInit {
       date: date,
     }
     this.newMessage.emit(newMessages);
-    if (senderArg == 'his') {
-      setTimeout(() => { screenScrollBottom.scrollTop = screenScrollBottom.scrollHeight }, 100);
-      return true;
-    }
-    else {
+    setTimeout(() => { screenScrollBottom.scrollTop = screenScrollBottom.scrollHeight }, 100);
+    if (senderArg == 'his' ) return true;
+    this.selectContact.messagesHistory.push({message: `${this.selectContact.name} is typing ... `, sender: "his"})
+    setTimeout(()=>{
+      this.selectContact.messagesHistory.pop()
+      const audio = new Audio('../assets/that-was-quick-606.mp3');
       this.getNewMessage(this.answer.value, "his", screenScrollBottom);
-    }
+      audio.play()
+    }, this.getRendom(10000, 15000))
   }
 
   generateAnswerMessage() {
@@ -48,6 +50,8 @@ export class MainChatComponent implements OnInit {
           .then(data => this.answer = data)
       })
   }
+
+  getRendom(min, max){return Math.floor(Math.random() * (max - min + 1) ) + min; }
 
   constructor(private APIAnswerService: APIAnswerService) { }
 

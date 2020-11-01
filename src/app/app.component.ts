@@ -1,6 +1,6 @@
 // ngOnInit() this method reads data from DataService
 // getNewMessage() this method adds new messages to JSON
-// selectContact() this method sends the selected contact from the list.contacts.component to the main-chatcomponent
+// selectContact() this method sends the selected contact from the list.contacts.component to the main-chat.component
 // sortForDate() this method makes sorting contacts by date
 import { Component, OnInit } from '@angular/core';
 import { DataService } from 'src/service/data.service';
@@ -25,10 +25,12 @@ export class AppComponent implements OnInit {
     const currentId = this.sentSelectContactToMainChatComponent.id;
     for (const key of this.contacts) {
       if (key.id == currentId) {
-        key.messagesHistory.push(event);
-        this.sortForDate(this.contacts)
-      }
+          key.messagesHistory.push(event);
+          this.sortForDate(this.contacts);
+         } 
     }
+    console.log(this.contacts);
+    this.setLocalStorage(this.contacts)
   }
   sortForDate(items) {
     items.sort((a, b) => {
@@ -37,12 +39,21 @@ export class AppComponent implements OnInit {
       return dateB - dateA
     })
   }
+  setLocalStorage(data){
+   // localStorage.removeItem('data')
+    localStorage.setItem('data', JSON.stringify(data))
+  }
+  getLocalStorage(){
+    return localStorage.getItem('data')
+  }
   ngOnInit() {
     this.DataService.getDate()
       .subscribe(data => {
         this.sortForDate(data);
-        console.log(data);
-        this.contacts = data;
+        if(localStorage.getItem('data'))
+          this.contacts = JSON.parse(this.getLocalStorage());
+        else
+          this.contacts = data
         this.sentSelectContactToMainChatComponent = this.contacts[0];
         return this.contacts;
       });
