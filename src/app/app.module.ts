@@ -2,10 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-<<<<<<< HEAD
-=======
-
->>>>>>> master
 import { AppComponent } from './app.component';
 import { ListContactsComponent } from './component/list-contacts/list-contacts.component';
 import { MainChatComponent } from './component/main-chat/main-chat.component';
