@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./main-top.component.css']
 })
 export class MainTopComponent implements OnInit {
-  @Input() selectContact:any;
+  @Input() selectContact: any;
   constructor() { }
 
   ngOnInit() {

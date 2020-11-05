@@ -1,7 +1,6 @@
 // setSearchMethod() is a method that searches the contact list
 // selectContact()   this is a method that selects a contact and sends it to the app.component
 //                   and then to the main.chat.component
-// 
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
@@ -16,17 +15,19 @@ export class ListContactsComponent implements OnInit {
   @Output() selectCont = new EventEmitter<any>();
 
   viewContacts: any = false;
-  dontFoundContacts: boolean = false;
-  searchEnter: string = "";
+  dontFoundContacts = false;
+  searchEnter = '';
 
   constructor() { }
 
   setSearchMethod(event) {
     this.dontFoundContacts = true;
-    this.viewContacts = []
-    if (event == "") this.dontFoundContacts = false;
+    this.viewContacts = [];
+    if (event === '') {
+      this.dontFoundContacts = false;
+    }
     for (const key of this.contacts) {
-      if (key.name.search(event) != -1) {
+      if (key.name.toLowerCase().search(event.toLowerCase().trim()) !== -1) {
         this.dontFoundContacts = false;
         this.viewContacts.push(key);
       }
@@ -36,10 +37,11 @@ export class ListContactsComponent implements OnInit {
     }
   }
   selectContact(increased: any, event) {
-    let allActiveClassCss = document.querySelectorAll(".active");
+    const allActiveClassCss = document.querySelectorAll('.active');
     event.currentTarget.classList.add('active');
-    if (allActiveClassCss[0] != undefined)
+    if (allActiveClassCss[0] !== undefined){
       allActiveClassCss[0].classList.remove('active');
+    }
     this.selectCont.emit(increased);
   }
 

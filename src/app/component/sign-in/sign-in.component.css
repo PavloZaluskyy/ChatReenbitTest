@@ -1,0 +1,81 @@
+section{
+    width: 100%;
+    height: 100vh;
+    z-index: 9999;
+    position: fixed; 
+    background: #fff;
+}
+.container{
+    width: auto;
+    height: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+.block{
+    width: auto;
+    height: auto;
+    border-radius: 30px;
+    border: 3px solid #3C4252;
+    background: #F5F5F5;
+    margin: 0 auto;
+    padding: 30px;
+}
+h2{
+    color: #797979;
+    text-align: center;
+    font-size: 2rem;
+}
+span{
+    color: #797979;
+    font-size: 1.5rem;
+}
+.social-panel, .back{
+    width: 100%;
+    height: auto;
+    margin: 35px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.social-btn, .back-btn{
+    width: 100%;
+    padding: 15px;
+    margin: 15px;
+    border: 1px solid #8D8D8D;
+    text-align: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 30px;
+}
+.gmail {
+    color: red;
+    border: 1px solid red;
+}
+.back-btn{
+    color: #797979;
+}
+
+.back-btn span{
+    margin-right: 10px;
+}
+.fb{
+    color: #0570E6;
+    border: 1px solid #0570E6;
+}
+.gmail:hover {
+    background-color: red;
+    color: #fff;
+    border: 1px solid #fff;
+}
+.back-btn:hover{
+    background-color: #3C4252;
+    color: #fff!important;
+    border: 1px solid #fff;
+}
+.fb:hover {
+    background-color: #0570E6;
+    color: #fff;
+    border: 1px solid #fff;
+}

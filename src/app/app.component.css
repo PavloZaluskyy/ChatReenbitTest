@@ -27,12 +27,13 @@
     width: 65%;
     height: auto;
 }
-@media (max-width: 790px) {.leftPanel{
-    width: 100%;
-    order: 2;
-}
-.rightPanel{
-    width: 100%;
-    order: 1;
-}
+@media (max-width: 790px) {
+    .leftPanel{
+        width: 100%;
+        order: 2;
+    }
+    .rightPanel{
+        width: 100%;
+        order: 1;
+    }
 }
