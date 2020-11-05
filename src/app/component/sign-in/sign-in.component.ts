@@ -1,3 +1,5 @@
+// signInWithFB() and signInWithGoogle() - are methods  that create the login form
+
 import { Component, OnInit } from '@angular/core';
 import { SocialAuthService } from 'angularx-social-login';
 import { FacebookLoginProvider, GoogleLoginProvider } from 'angularx-social-login';
@@ -11,6 +13,7 @@ export class SignInComponent implements OnInit {
   constructor( private authService: SocialAuthService) { }
 
   ngOnInit(): void {}
+
   signInWithFB(): void {
     this.authService.signIn(FacebookLoginProvider.PROVIDER_ID);
   }
