@@ -1,5 +1,7 @@
 // setSearchMethod() - is a method that sends the input value to the parent component
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { SocialAuthService } from 'angularx-social-login';
+import { UserService } from 'src/service/user.service';
 
 @Component({
   selector: 'app-search-panel',
@@ -10,12 +12,21 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 export class SearchPanelComponent implements OnInit {
 
   @Output() setSearch = new EventEmitter<string>();
+  user;
   search: string;
   setSearchMethod(search) {
     this.setSearch.emit(search);
   }
-  constructor() { }
+  constructor(private authService: SocialAuthService, private userService: UserService) { }
 
-  ngOnInit() { }
+  signOut(){
+    this.authService.signOut();
+    this.userService.user.name = 'User';
+    this.userService.user.photoUrl = 'assets/img/myAvatar.png';
+  }
+
+  ngOnInit() {
+    this.user = this.userService;
+   }
 
 }

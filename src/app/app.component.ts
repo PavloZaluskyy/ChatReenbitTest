@@ -17,43 +17,43 @@ export class AppComponent implements OnInit {
 
   sentSelectContactToMainChatComponent: any;
 
-  constructor(private DataService: DataService) { }
+  constructor(private dataService: DataService) { }
   selectContact(increased: any) {
-    this.sentSelectContactToMainChatComponent = increased
+    this.sentSelectContactToMainChatComponent = increased;
   }
   getNewMessage(event) {
     const currentId = this.sentSelectContactToMainChatComponent.id;
     for (const key of this.contacts) {
-      if (key.id == currentId) {
+      if (key.id === currentId) {
           key.messagesHistory.push(event);
           this.sortForDate(this.contacts);
-         } 
-    }
-    console.log(this.contacts);
-    this.setLocalStorage(this.contacts)
+        }
+        }
+    this.setLocalStorage(this.contacts);
   }
   sortForDate(items) {
     items.sort((a, b) => {
-      let dateA: any = new Date(a.messagesHistory[a.messagesHistory.length - 1].date),
-        dateB: any = new Date(b.messagesHistory[b.messagesHistory.length - 1].date);
-      return dateB - dateA
-    })
+      const dateA: any = new Date(a.messagesHistory[a.messagesHistory.length - 1].date);
+      const dateB: any = new Date(b.messagesHistory[b.messagesHistory.length - 1].date);
+      return dateB - dateA;
+    });
   }
   setLocalStorage(data){
-   // localStorage.removeItem('data')
-    localStorage.setItem('data', JSON.stringify(data))
+    localStorage.setItem('data', JSON.stringify(data));
   }
   getLocalStorage(){
-    return localStorage.getItem('data')
+    return localStorage.getItem('data');
   }
   ngOnInit() {
-    this.DataService.getDate()
+    this.dataService.getDate()
       .subscribe(data => {
         this.sortForDate(data);
-        if(localStorage.getItem('data'))
-          this.contacts = JSON.parse(this.getLocalStorage());
-        else
-          this.contacts = data
+        if ( localStorage.getItem( 'data' ) ) {
+          this.contacts = JSON.parse( this.getLocalStorage() );
+        }
+        else{
+          this.contacts = data;
+        }
         this.sentSelectContactToMainChatComponent = this.contacts[0];
         return this.contacts;
       });
