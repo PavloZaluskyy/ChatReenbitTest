@@ -2,13 +2,18 @@
   <div class="container">
     <div class="topInfo">
       <div class="aboutUser">
-        <img src="assets/img/myAvatar.png" class="userAvatar" alt="User Avatar">
-        <i class="far fa-check-circle status"></i>
-
+        <div>
+          <img src="{{user.user.photoUrl}}" class="userAvatar" alt="User Avatar">
+          <i class="far fa-check-circle status"></i>
+        </div>
+        
+        <span>{{user.user.name}}</span>
 
       </div>
-      <a class="signIn"
+      <a *ngIf="user.user.name === 'User'" class="signIn"
         routerLink="/sign-in"><span> Sign In</span></a>
+        <a *ngIf="user.user.name !== 'User'" class="signIn"
+        (click)="signOut()"><span> Sign Out</span></a>
     </div>
     <div class="search">
       <i class="fas fa-search"></i>
