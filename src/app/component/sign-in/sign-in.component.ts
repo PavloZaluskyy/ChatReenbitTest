@@ -1,6 +1,7 @@
 // signInWithFB() and signInWithGoogle() - are methods  that create the login form
 
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 import { SocialAuthService, SocialUser } from 'angularx-social-login';
 import { FacebookLoginProvider, GoogleLoginProvider } from 'angularx-social-login';
 import { UserService } from 'src/service/user.service';
@@ -14,9 +15,7 @@ export class SignInComponent implements OnInit {
 
   user: SocialUser;
   loggedIn: boolean;
-
-  constructor( private authService: SocialAuthService, private userService: UserService) { }
-
+  constructor( private authService: SocialAuthService, private userService: UserService, private router: Router) { }
   ngOnInit(): void {
     this.authService.authState.subscribe((user) => {
       this.user = user;
@@ -26,8 +25,10 @@ export class SignInComponent implements OnInit {
   }
   signInWithFB(): void {
     this.authService.signIn(FacebookLoginProvider.PROVIDER_ID);
+    this.router.navigate(['']);
   }
   signInWithGoogle(){
     this.authService.signIn(GoogleLoginProvider.PROVIDER_ID);
+    this.router.navigate(['']);
   }
 }

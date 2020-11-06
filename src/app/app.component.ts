@@ -4,6 +4,7 @@
 // sortForDate() this method makes sorting contacts by date
 import { Component, OnInit } from '@angular/core';
 import { DataService } from 'src/service/data.service';
+import { UserService } from 'src/service/user.service';
 
 @Component({
   selector: 'app-root',
@@ -17,7 +18,7 @@ export class AppComponent implements OnInit {
 
   sentSelectContactToMainChatComponent: any;
 
-  constructor(private dataService: DataService) { }
+  constructor(private dataService: DataService, private userService: UserService) { }
   selectContact(increased: any) {
     this.sentSelectContactToMainChatComponent = increased;
   }
