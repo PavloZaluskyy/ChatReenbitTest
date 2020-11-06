@@ -22,7 +22,7 @@ export class SearchPanelComponent implements OnInit {
   signOut(){
     this.authService.signOut();
     this.userService.user.name = 'User';
-    this.userService.user.photoUrl = 'assets/img/myAvatar.png'
+    this.userService.user.photoUrl = 'assets/img/myAvatar.png';
   }
 
   ngOnInit() {

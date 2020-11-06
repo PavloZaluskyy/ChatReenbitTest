@@ -7,10 +7,10 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class DataService {
-  private _url = "assets/data.json";
+  private url = 'assets/data.json';
   constructor(private http: HttpClient) { }
 
-  getDate():Observable<Data[]>{
-    return this.http.get<Data[]>(this._url);
+  getDate(): Observable<Data[]>{
+    return this.http.get<Data[]>(this.url);
   }
 }

@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-
 import { AppComponent } from './app.component';
 import { ListContactsComponent } from './component/list-contacts/list-contacts.component';
 import { MainChatComponent } from './component/main-chat/main-chat.component';
@@ -18,7 +17,8 @@ import {
   FacebookLoginProvider,
 } from 'angularx-social-login';
 
-const appRoutes: Routes =[
+
+const appRoutes: Routes = [
   { path: 'sign-in', component: SignInComponent}
 ];
 

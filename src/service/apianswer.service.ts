@@ -7,11 +7,11 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class APIAnswerService {
-  private _url = 'https://api.chucknorris.io/jokes/random';
+  private url = 'https://api.chucknorris.io/jokes/random';
 
   constructor(private http: HttpClient) { }
 
   getAnswer(): Observable<APIAnswer[]> {
-    return this.http.get<APIAnswer[]>(this._url);
+    return this.http.get<APIAnswer[]>(this.url);
   }
 }
